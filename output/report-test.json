@@ -1,0 +1,58 @@
+{
+  "total_libyear": 7.38672142368241,
+  "total_components": 3,
+  "successful_analyses": 2,
+  "failed_analyses": 1,
+  "breakdown_by_package_manager": {
+    "pypi": {
+      "total_libyear": 7.38672142368241,
+      "component_count": 3,
+      "successful_count": 2,
+      "failed_count": 1
+    }
+  },
+  "components": [
+    {
+      "name": "requests",
+      "package_type": "pypi",
+      "current_version": "2.28.0",
+      "latest_version": "2.32.4",
+      "years_behind": 3.0006844626967832,
+      "current_date": "2022-06-09T14:44:34",
+      "latest_date": "2025-06-09T16:43:05",
+      "purl": "pkg:pypi/requests@2.28.0",
+      "error": null
+    },
+    {
+      "name": "django",
+      "package_type": "pypi",
+      "current_version": "3.2.0",
+      "latest_version": "5.2.4",
+      "years_behind": 0,
+      "current_date": null,
+      "latest_date": "2025-07-02T18:47:35",
+      "purl": "pkg:pypi/django@3.2.0",
+      "error": "Release dates unavailable from registry, latest version: 5.2.4"
+    },
+    {
+      "name": "numpy",
+      "package_type": "pypi",
+      "current_version": "1.20.0",
+      "latest_version": "2.3.1",
+      "years_behind": 4.386036960985626,
+      "current_date": "2021-01-30T19:35:22",
+      "latest_date": "2025-06-21T11:47:47",
+      "purl": "pkg:pypi/numpy@1.20.0",
+      "error": null
+    }
+  ],
+  "errors": [
+    {
+      "component": "django",
+      "package_type": "pypi",
+      "version": "3.2.0",
+      "error": "Release dates unavailable from registry, latest version: 5.2.4",
+      "purl": "pkg:pypi/django@3.2.0"
+    }
+  ]
+}

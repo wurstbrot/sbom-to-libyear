@@ -1,0 +1,80 @@
+# SBOM Libyear Configuration
+
+repositories:
+  maven:
+    # Maven Central (default)
+    - name: "maven-central"
+      url: "https://repo1.maven.org/maven2"
+      search_url: "https://search.maven.org/solrsearch/select"
+      enabled: true
+      priority: 1
+    
+    # Example Artifactory configuration
+    # - name: "corporate-artifactory"
+    #   url: "https://artifactory.company.com/artifactory/maven-public"
+    #   search_url: "https://artifactory.company.com/artifactory/api/search/artifact"
+    #   enabled: false
+    #   priority: 2
+    #   auth:
+    #     username: "${ARTIFACTORY_USER}"
+    #     password: "${ARTIFACTORY_PASSWORD}"
+    #     # Alternative: API token
+    #     # token: "${ARTIFACTORY_TOKEN}"
+  
+  npm:
+    - name: "npm-registry"
+      url: "https://registry.npmjs.org"
+      enabled: true
+      priority: 1
+    
+    # Example corporate NPM registry
+    # - name: "corporate-npm"
+    #   url: "https://npm.company.com"
+    #   enabled: false
+    #   priority: 2
+    #   auth:
+    #     token: "${NPM_TOKEN}"
+  
+  pypi:
+    - name: "pypi"
+      url: "https://pypi.org/pypi"
+      enabled: true
+      priority: 1
+    
+    # Example private PyPI
+    # - name: "private-pypi"
+    #   url: "https://pypi.company.com/simple"
+    #   enabled: false
+    #   priority: 2
+    #   auth:
+    #     username: "${PYPI_USER}"
+    #     password: "${PYPI_PASSWORD}"
+  
+  nuget:
+    - name: "nuget"
+      url: "https://api.nuget.org/v3-flatcontainer"
+      enabled: true
+      priority: 1
+
+# HTTP settings
+http:
+  timeout: 10  # seconds
+  retries: 3
+  user_agent: "sbom-libyear-calculator/1.0"
+
+# Proxy settings (optional)
+# proxy:
+#   http: "http://proxy.company.com:8080"
+#   https: "https://proxy.company.com:8080"
+#   no_proxy: "localhost,127.0.0.1,.company.com"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Cache settings
+cache:
+  enabled: true
+  ttl: 3600  # seconds (1 hour)
+  directory: "~/.cache/sbom-libyear"
